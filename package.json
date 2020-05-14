@@ -1,0 +1,30 @@
+{
+  "name": "kakao-message-template",
+  "version": "1.0.0",
+  "description": "An kakao custom message template builder for node-kakao",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delta-kor/kakao-message-template.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node-kakao",
+    "kakao"
+  ],
+  "author": "delta-kor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delta-kor/kakao-message-template/issues"
+  },
+  "homepage": "https://github.com/delta-kor/kakao-message-template#readme",
+  "dependencies": {
+    "node-kakao": "^2.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.2"
+  }
+}
