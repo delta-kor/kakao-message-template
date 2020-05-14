@@ -1,5 +1,4 @@
 import Component from '../component';
-import Model from '../models/Model';
 import LinkModel from '../models/Link';
 
 export default class Link extends Component {

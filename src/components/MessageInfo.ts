@@ -1,6 +1,6 @@
 import Component from '../component';
 import MessageInfoModel from '../models/MessageInfo';
-import {MessageType} from '..';
+import {MessageType} from '../models/MessageType';
 import Link from './Link';
 
 export default class MessageInfo extends Component {

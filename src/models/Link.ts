@@ -1,4 +1,6 @@
-export default interface LinkModel {
+import Model from './Model';
+
+export default interface LinkModel extends Model {
     LAA?: boolean; // IS LAA
     LA?: string;
     LAD?: string;

@@ -2,8 +2,9 @@ import Component from '../component';
 import TextItem from './TextItem';
 import Link from './Link';
 import FeedContentModel from '../models/FeedContent';
+import Content from './Content';
 
-export default class FeedContent extends Component {
+export default class FeedContent extends Component implements Content {
 
     private textItem: TextItem;
 

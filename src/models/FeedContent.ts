@@ -1,6 +1,6 @@
-import Model from './Model';
 import TextItemModel from './TextItem';
+import ContentModel from './Content';
 
-export default interface FeedContentModel extends Model {
+export default interface FeedContentModel extends ContentModel {
     TI?: TextItemModel;
 }
