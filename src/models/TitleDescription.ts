@@ -1,4 +1,4 @@
-import Model from './model';
+import Model from './Model';
 
 export default interface TitleDescriptionModel extends Model {
     T: string;

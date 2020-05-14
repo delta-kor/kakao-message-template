@@ -1,5 +1,5 @@
-import Model from './model';
-import TextItemModel from './text-item';
+import Model from './Model';
+import TextItemModel from './TextItem';
 
 export default interface FeedContentModel extends Model {
     TI?: TextItemModel;

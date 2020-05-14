@@ -1,5 +1,5 @@
-import Model from './model';
-import LinkModel from './link';
+import Model from './Model';
+import LinkModel from './Link';
 
 export default interface MessageInfoModel extends Model {
     LI?: string;

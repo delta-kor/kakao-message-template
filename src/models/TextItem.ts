@@ -1,6 +1,6 @@
-import Model from './model';
-import TitleDescriptionModel from './title-description';
-import LinkModel from './link';
+import Model from './Model';
+import TitleDescriptionModel from './TitleDescription';
+import LinkModel from './Link';
 
 export default interface TextItemModel extends Model {
     TD?: TitleDescriptionModel;

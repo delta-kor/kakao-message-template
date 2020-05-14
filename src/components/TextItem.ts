@@ -1,7 +1,7 @@
 import Component from '../component';
-import TextItemModel from '../models/text-item';
-import Link from './link';
-import TitleDescription from './title-description';
+import TextItemModel from '../models/TextItem';
+import Link from './Link';
+import TitleDescription from './TitleDescription';
 
 export default class TextItem extends Component {
 

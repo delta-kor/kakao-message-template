@@ -1,7 +1,7 @@
 import Component from '../component';
-import TextItem from './text-item';
-import Link from './link';
-import FeedContentModel from '../models/feed-content';
+import TextItem from './TextItem';
+import Link from './Link';
+import FeedContentModel from '../models/FeedContent';
 
 export default class FeedContent extends Component {
 

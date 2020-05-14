@@ -1,5 +1,5 @@
 import Component from '../component';
-import TitleDescriptionModel from '../models/title-description';
+import TitleDescriptionModel from '../models/TitleDescription';
 
 export default class TitleDescription extends Component {
 

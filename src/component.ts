@@ -1,4 +1,4 @@
-import Model from './models/model';
+import Model from './models/Model';
 
 export default abstract class Component {
 
