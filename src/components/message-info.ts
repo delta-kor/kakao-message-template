@@ -14,6 +14,8 @@ export default class MessageInfo extends Component {
     private readonly versionIphone: string;
     private readonly versionWindows: string;
     private readonly versionMac: string;
+    private readonly serviceID: string;
+    private readonly documentID: string;
 
     constructor(type: MessageType, link: string | Link = new Link(''), serviceName: string = '', serviceIcon: string = '') {
 
@@ -30,6 +32,8 @@ export default class MessageInfo extends Component {
         this.versionIphone = '6.4.5';
         this.versionWindows = '2.3.5';
         this.versionMac = '2.6.1';
+        this.serviceID = 'plusfriend_bot';
+        this.documentID = 'profile_id=256584582';
 
     }
 
@@ -85,7 +89,9 @@ export default class MessageInfo extends Component {
             VA: this.versionAndroid,
             VI: this.versionIphone,
             VW: this.versionWindows,
-            VM: this.versionMac
+            VM: this.versionMac,
+            SID: this.serviceID,
+            DID: this.documentID
         };
 
     }
