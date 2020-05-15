@@ -1,4 +1,4 @@
-# KAKAO-MESSAGE-TEMPLATE (WIP)
+# KAKAO-MESSAGE-TEMPLATE
 A kakao custom message template builder for [node-kakao](https://github.com/storycraft/node-kakao)
 
 ## Getting Started
@@ -15,13 +15,13 @@ $ npm install kakao-message-template
 ### Features
 * Creating Custom Message Template
 * Full Customizable Message Template
-* Sending Through node-kakao (WIP)
+* Sending Through node-kakao
 
 ### Examples
 ```js
 const {MessageTemplate, MessageInfo, MessageType, FeedContent, Button} = require('kakao-message-template');
 
-const Header = newMessageInfo(MessageType.FEED, 'https://google.com/', 'KAKAO-MESSAGE-TEMPLATE', 'http://lt2.kr/izone.png');
+const Header = new MessageInfo(MessageType.FEED, 'https://google.com/', 'KAKAO-MESSAGE-TEMPLATE', 'http://lt2.kr/izone.png');
 
 const Content = new FeedContent('A Message Title', 'And a description', 'https://naver.com/');
 Content.Buttons.push(new Button('My Homepage', 'http://lt2.kr/'));
