@@ -30,6 +30,6 @@ Content.Buttons.push(new Button('Dummy Button', 'http://kakao.com/'));
 const Message = new MessageTemplate(Header, Content);
 
 // Sending attachment by node-kakao
-const attachment = new AttachmnetTemplate(Message);
-chat.replyText(attachment);
+const attachment = new AttachmentTemplate(Message);
+chat.replyAttachment(attachment);
 ```
