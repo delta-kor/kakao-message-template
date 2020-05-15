@@ -9,12 +9,14 @@ export default class FeedContent extends Component implements Content {
 
     private textItem: TextItem;
     private buttons: ButtonList;
+    private buttonLayout: 'Horizontal' | 'Vertical';
 
     constructor(title: string = '', description: string = '', link: string | Link = new Link('')) {
 
         super();
         this.textItem = new TextItem(title, description, link, true);
         this.buttons = new ButtonList();
+        this.buttonLayout = 'Horizontal';
 
     }
 
@@ -34,6 +36,10 @@ export default class FeedContent extends Component implements Content {
         return this.buttons;
     }
 
+    get ButtonLayout(): 'Horizontal' | 'Vertical' {
+        return this.buttonLayout;
+    }
+
     set Title(query: string) {
         this.textItem.Title = query;
     }
@@ -50,9 +56,14 @@ export default class FeedContent extends Component implements Content {
         this.buttons = query;
     }
 
+    set ButtonLayout(query: 'Horizontal' | 'Vertical') {
+        this.buttonLayout = query;
+    }
+
     toJson(): FeedContentModel {
         return {
             BUL: this.buttons.toJson(),
+            BUT: this.buttonLayout === 'Horizontal' ? 0 : 1,
             TI: this.textItem.toJson()
         }
     }

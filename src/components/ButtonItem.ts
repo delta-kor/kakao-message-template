@@ -7,7 +7,7 @@ export default class ButtonItem extends Component {
     private show: 'both' | 'sender' | 'receiver' ;
     private highlight: boolean;
 
-    constructor(title: string = '', show: 'both' | 'sender' | 'receiver' = 'both', highlight: boolean = true) {
+    constructor(title: string = '', show: 'both' | 'sender' | 'receiver' = 'both', highlight: boolean = false) {
 
         super();
         this.title = title;

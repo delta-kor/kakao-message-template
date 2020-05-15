@@ -1,7 +1,7 @@
 {
   "name": "kakao-message-template",
   "version": "1.0.0",
-  "description": "An kakao custom message template builder for node-kakao",
+  "description": "A kakao custom message template builder for node-kakao",
   "main": "dist/index.js",
   "scripts": {
     "build": "./node_modules/.bin/tsc"
