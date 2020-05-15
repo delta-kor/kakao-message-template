@@ -10,6 +10,8 @@ export default class MessageInfo extends Component {
     private serviceLink: Link;
     private serviceName: string;
     private serviceIcon: string;
+    private isForwardable: boolean;
+    private isVerified: boolean;
     private readonly versionAndroid: string;
     private readonly versionIphone: string;
     private readonly versionWindows: string;
@@ -28,6 +30,8 @@ export default class MessageInfo extends Component {
         this.serviceLink = link;
         this.serviceName = serviceName;
         this.serviceIcon = serviceIcon;
+        this.isForwardable = true;
+        this.isVerified = false;
         this.versionAndroid = '6.4.5';
         this.versionIphone = '6.4.5';
         this.versionWindows = '2.3.5';
@@ -57,6 +61,14 @@ export default class MessageInfo extends Component {
         return this.serviceIcon;
     }
 
+    get IsForwardable(): boolean {
+        return this.isForwardable;
+    }
+
+    get IsVerified(): boolean {
+        return this.isVerified;
+    }
+
     set Type(query: MessageType) {
         this.type = query;
     }
@@ -77,6 +89,14 @@ export default class MessageInfo extends Component {
         this.serviceIcon = query;
     }
 
+    set IsForwardable(query: boolean)  {
+        this.isForwardable = query;
+    }
+
+    set IsVerified(query: boolean) {
+        this.isVerified = query;
+    }
+
     toJson(): MessageInfoModel {
 
         return {
@@ -86,6 +106,8 @@ export default class MessageInfo extends Component {
             SIC: this.serviceIcon,
             L: this.link.toJson(),
             SL: this.serviceLink.toJson(),
+            FW: this.isForwardable,
+            KV: this.isVerified,
             VA: this.versionAndroid,
             VI: this.versionIphone,
             VW: this.versionWindows,

@@ -19,16 +19,17 @@ $ npm install kakao-message-template
 
 ### Examples
 ```js
-const Kakao = require('kakao-message-template');
+const {MessageTemplate, MessageInfo, MessageType, FeedContent, Button} = require('kakao-message-template');
 
-const Header = new Kakao.MessageInfo(Kakao.MessageType.FEED, 'https://google.com/', 'KAKAO-MESSAGE-TEMPLATE', 'http://lt2.kr/izone.png');
+const Header = newMessageInfo(MessageType.FEED, 'https://google.com/', 'KAKAO-MESSAGE-TEMPLATE', 'http://lt2.kr/izone.png');
 
-const Content = new Kakao.FeedContent('A Message Title', 'And a description', 'https://naver.com/');
-Content.Buttons.push(new Kakao.Button('My Homepage', 'http://lt2.kr/'));
-Content.Buttons.push(new Kakao.Button('Dummy Button', 'http://kakao.com/'));
+const Content = new FeedContent('A Message Title', 'And a description', 'https://naver.com/');
+Content.Buttons.push(new Button('My Homepage', 'http://lt2.kr/'));
+Content.Buttons.push(new Button('Dummy Button', 'http://kakao.com/'));
 
-const Info = new Kakao.KakaoLinkInfo();
-const Message = new Kakao.MessageTemplate(Header, Content, Info);
+const Message = new MessageTemplate(Header, Content);
 
-Message.toJson();
+// Sending attachment by node-kakao
+const attachment = new AttachmnetTemplate(Message);
+chat.replyText(attachment);
 ```
