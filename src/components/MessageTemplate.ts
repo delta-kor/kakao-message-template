@@ -3,8 +3,9 @@ import Content from './Content';
 import MessageInfo from './MessageInfo';
 import KakaoLinkInfo from './KakaoLinkInfo';
 import MessageTemplateModel from '../models/MessageTemplate';
+import {ChatAttachment, ChatType} from 'node-kakao/dist';
 
-export default class MessageTemplate extends Component {
+export default class MessageTemplate extends Component implements ChatAttachment {
 
     private header: MessageInfo;
     private content: Content;
@@ -49,6 +50,16 @@ export default class MessageTemplate extends Component {
             P: this.header.toJson(),
             K: this.info.toJson()
         };
+    }
+
+    readAttachment(rawJson: any): void { }
+
+    toJsonAttachment(): any {
+        return this.toJson();
+    }
+
+    get RequiredMessageType() {
+        return ChatType.Custom;
     }
 
 }
