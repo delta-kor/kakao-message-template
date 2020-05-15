@@ -16,7 +16,7 @@ export default class FeedContent extends Component implements Content {
         super();
         this.textItem = new TextItem(title, description, link, true);
         this.buttons = new ButtonList();
-        this.buttonLayout = 'Horizontal';
+        this.buttonLayout = 'Vertical';
 
     }
 

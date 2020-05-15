@@ -10,7 +10,7 @@ export default class MessageTemplate extends Component {
     private content: Content;
     private info: KakaoLinkInfo;
     
-    constructor(header: MessageInfo, content: Content, info: KakaoLinkInfo) {
+    constructor(header: MessageInfo, content: Content, info: KakaoLinkInfo = new KakaoLinkInfo()) {
 
         super();
         this.header = header;
