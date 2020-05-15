@@ -7,7 +7,11 @@ import KakaoLinkInfo from './components/KakaoLinkInfo';
 import Link from './components/Link';
 import MessageInfo from './components/MessageInfo';
 import MessageTemplate from './components/MessageTemplate';
+import Social from './components/Social';
 import TextItem from './components/TextItem';
+import Thumbnail from './components/Thumbnail';
+import ThumbnailItem from './components/ThumbnailItem';
+import ThumbnailList from './components/ThumbnailList';
 import TitleDescription from './components/TitleDescription';
 import {MessageType} from './models/MessageType';
 
@@ -21,7 +25,11 @@ export {
     Link,
     MessageInfo,
     MessageTemplate,
+    Social,
     TextItem,
+    Thumbnail,
+    ThumbnailItem,
+    ThumbnailList,
     TitleDescription,
     MessageType
 }

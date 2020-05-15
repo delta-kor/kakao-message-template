@@ -3,6 +3,7 @@ import ContentModel from './Content';
 import ButtonModel from './Button';
 import LinkModel from './Link';
 import SocialModel from './Social';
+import ThumbnailModel from './Thumbnail';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
@@ -17,5 +18,5 @@ export default interface FeedContentModel extends ContentModel {
     // TAM?: TextAlignList;
     TI?: TextItemModel;
     THC?: number; // Thumbnail Count
-    // THL?: ThumbnailList
+    THL?: ThumbnailModel[]; // Thumbnail List
 }

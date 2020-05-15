@@ -5,13 +5,16 @@ import FeedContentModel from '../models/FeedContent';
 import Content from './Content';
 import ButtonList from './ButtonList';
 import Social from './Social';
+import ThumbnailList from './ThumbnailList';
 
 export default class FeedContent extends Component implements Content {
 
     private textItem: TextItem;
     private buttons: ButtonList;
     private buttonLayout: 'Horizontal' | 'Vertical';
-    private social?: Social;
+    private social: Social;
+    private thumbnailCount: number;
+    private thumbnailList: ThumbnailList;
 
     constructor(title: string = '', description: string = '', link: string | Link = new Link('')) {
 
@@ -19,6 +22,9 @@ export default class FeedContent extends Component implements Content {
         this.textItem = new TextItem(title, description, link, true);
         this.buttons = new ButtonList();
         this.buttonLayout = 'Vertical';
+        this.social = new Social();
+        this.thumbnailCount = 0;
+        this.thumbnailList = new ThumbnailList();
 
     }
 
@@ -43,8 +49,15 @@ export default class FeedContent extends Component implements Content {
     }
 
     get Social(): Social {
-        if(!this.social) this.social = new Social();
         return this.social;
+    }
+
+    get ThumbnailCount(): number {
+        return this.thumbnailCount;
+    }
+
+    get ThumbnailList(): ThumbnailList {
+        return this.thumbnailList;
     }
 
     set Title(query: string) {
@@ -71,12 +84,22 @@ export default class FeedContent extends Component implements Content {
         this.social = query;
     }
 
+    set ThumbnailCount(query: number) {
+        this.thumbnailCount = query;
+    }
+
+    set ThumbnailList(query: ThumbnailList) {
+        this.thumbnailList = query;
+    }
+
     toJson(): FeedContentModel {
         return {
             BUL: this.buttons.toJson(),
             BUT: this.buttonLayout === 'Horizontal' ? 0 : 1,
             TI: this.textItem.toJson(),
-            SO: this.social?.toJson()
+            SO: this.social.toJson(),
+            THC: this.thumbnailCount,
+            THL: this.thumbnailList.toJson()
         }
     }
 
