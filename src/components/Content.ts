@@ -1,3 +1,3 @@
-import Component from '../component';
+import Component from '../Component';
 
 export default abstract class Content extends Component { }

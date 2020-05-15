@@ -1,4 +1,4 @@
-import Component from '../component';
+import Component from '../Component';
 import KakaoLinkInfoModel from '../models/KakaoLinkInfo';
 
 export default class KakaoLinkInfo extends Component {

@@ -1,4 +1,4 @@
-import Component from '../component';
+import Component from '../Component';
 import MessageInfoModel from '../models/MessageInfo';
 import {MessageType} from '../models/MessageType';
 import Link from './Link';

@@ -1,4 +1,4 @@
-import Component from '../component';
+import Component from '../Component';
 import Content from './Content';
 import MessageInfo from './MessageInfo';
 import KakaoLinkInfo from './KakaoLinkInfo';
@@ -17,6 +17,30 @@ export default class MessageTemplate extends Component {
         this.content = content;
         this.info = info;
 
+    }
+
+    get Header(): MessageInfo {
+        return this.header;
+    }
+
+    get Content(): Content {
+        return this.content;
+    }
+
+    get Info(): KakaoLinkInfo {
+        return this.info;
+    }
+
+    set Header(query: MessageInfo) {
+        this.header = query;
+    }
+
+    set Content(query: Content) {
+        this.content = query;
+    }
+
+    set Info(query: KakaoLinkInfo) {
+        this.info = query;
     }
 
     toJson(): MessageTemplateModel {

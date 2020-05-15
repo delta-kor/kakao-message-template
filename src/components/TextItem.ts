@@ -1,4 +1,4 @@
-import Component from '../component';
+import Component from '../Component';
 import TextItemModel from '../models/TextItem';
 import Link from './Link';
 import TitleDescription from './TitleDescription';

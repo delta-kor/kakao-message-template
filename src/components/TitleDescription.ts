@@ -1,4 +1,4 @@
-import Component from '../component';
+import Component from '../Component';
 import TitleDescriptionModel from '../models/TitleDescription';
 
 export default class TitleDescription extends Component {
