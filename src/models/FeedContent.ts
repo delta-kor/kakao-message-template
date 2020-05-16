@@ -6,12 +6,13 @@ import SocialModel from './Social';
 import ThumbnailModel from './Thumbnail';
 import ProfileModel from './Profile';
 import HeaderModel from './Header';
+import ImageTitleModel from './ImageTitle';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
     BUT?: 0 | 1;
     HD?: HeaderModel;
-    // IMT?: ImageTitle;
+    IMT?: ImageTitleModel;
     // ITL?: ItemList;
     // ILS?: ItemListSummary;
     L?: LinkModel;

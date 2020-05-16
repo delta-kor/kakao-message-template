@@ -28,7 +28,7 @@ export default class Profile extends Component {
         return this.thumbnail;
     }
 
-    get Title(): TitleDescription {
+    get Text(): TitleDescription {
         return this.title;
     }
 
@@ -40,7 +40,7 @@ export default class Profile extends Component {
         this.thumbnail = query;
     }
 
-    set Title(query: TitleDescription) {
+    set Text(query: TitleDescription) {
         this.title = query;
     }
 
