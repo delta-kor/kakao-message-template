@@ -24,11 +24,29 @@ $ npm install kakao-message-template
 ```js
 const {MessageTemplate, MessageInfo, MessageType, FeedContent, Button} = require('kakao-message-template');
 
-const Header = new MessageInfo(MessageType.FEED, 'https://google.com/', 'KAKAO-MESSAGE-TEMPLATE', 'http://lt2.kr/izone.png');
+const Header = new MessageInfo(MessageType.FEED, 'http://example.com', 'App Name', 'http://example.com/icon.png');
 
-const Content = new FeedContent('A Message Title', 'And a description', 'https://naver.com/');
-Content.Buttons.push(new Button('My Homepage', 'http://lt2.kr/'));
-Content.Buttons.push(new Button('Dummy Button', 'http://kakao.com/'));
+const Content = new FeedContent('My Feed Message', 'Using kakao-message-template', 'https://example.com/mypage');
+Content.Buttons.push(new Button('Homepage', 'http://example.com/'));
+Content.Buttons.push(new Button('Signup', 'http://example.com/signup'));
+
+const Message = new MessageTemplate(Header, Content);
+
+// Sending attachment by node-kakao
+const attachment = new AttachmentTemplate(Message);
+chat.replyAttachment(attachment);
+```
+```js
+const {MessageTemplate, MessageInfo, MessageType, ListContent, ArticleListItem} = require('kakao-message-template');
+
+const Header = new MessageInfo(MessageType.FEED, 'http://example.com', 'App Name', 'http://example.com/icon.png');
+
+const Content = new ListContent('Top 3');
+Content.ArticleList.push(
+    new ArticleListItem('Alice', 'HTML', 'http://example.com/alice'),
+    new ArticleListItem('Bob', 'CSS', 'http://example.com/bob'),
+    new ArticleListItem('Carol', 'JAVASCRIPT', 'http://example.com/bob')
+);
 
 const Message = new MessageTemplate(Header, Content);
 
