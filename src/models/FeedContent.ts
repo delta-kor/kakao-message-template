@@ -5,11 +5,12 @@ import LinkModel from './Link';
 import SocialModel from './Social';
 import ThumbnailModel from './Thumbnail';
 import ProfileModel from './Profile';
+import HeaderModel from './Header';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
     BUT?: 0 | 1;
-    // HD?: Header;
+    HD?: HeaderModel;
     // IMT?: ImageTitle;
     // ITL?: ItemList;
     // ILS?: ItemListSummary;
