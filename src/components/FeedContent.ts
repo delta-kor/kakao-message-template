@@ -12,7 +12,7 @@ import ImageTitle from './ImageTitle';
 import ItemList from './ItemList';
 import ItemListSummary from './ItemListSummary';
 
-export default class FeedContent extends Component implements Content {
+export default class FeedContent extends Content {
 
     private textItem: TextItem;
     private buttons: ButtonList;
