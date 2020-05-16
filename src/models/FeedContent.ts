@@ -7,13 +7,14 @@ import ThumbnailModel from './Thumbnail';
 import ProfileModel from './Profile';
 import HeaderModel from './Header';
 import ImageTitleModel from './ImageTitle';
+import ItemModel from './Item';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
     BUT?: 0 | 1;
     HD?: HeaderModel;
     IMT?: ImageTitleModel;
-    // ITL?: ItemList;
+    ITL?: ItemModel[];
     // ILS?: ItemListSummary;
     L?: LinkModel;
     PR?: ProfileModel;
