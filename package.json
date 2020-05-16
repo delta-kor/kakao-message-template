@@ -1,6 +1,6 @@
 {
   "name": "kakao-message-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A kakao custom message template builder for node-kakao",
   "main": "dist/index.js",
   "scripts": {

@@ -4,6 +4,7 @@ import ButtonModel from './Button';
 import LinkModel from './Link';
 import SocialModel from './Social';
 import ThumbnailModel from './Thumbnail';
+import ProfileModel from './Profile';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
@@ -13,7 +14,7 @@ export default interface FeedContentModel extends ContentModel {
     // ITL?: ItemList;
     // ILS?: ItemListSummary;
     L?: LinkModel;
-    // PR?: Profile;
+    PR?: ProfileModel;
     SO?: SocialModel;
     // TAM?: TextAlignList;
     TI?: TextItemModel;

@@ -10,7 +10,7 @@ export default class ThumbnailItem extends Component {
     private crop: boolean;
     private thumbnail: string;
 
-    constructor(thumbnail: string, width: number, height: number) {
+    constructor(thumbnail: string = '', width: number = 0, height: number = 0) {
 
         super();
         this.thumbnail = thumbnail;

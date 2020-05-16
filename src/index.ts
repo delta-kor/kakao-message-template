@@ -7,6 +7,7 @@ import KakaoLinkInfo from './components/KakaoLinkInfo';
 import Link from './components/Link';
 import MessageInfo from './components/MessageInfo';
 import MessageTemplate from './components/MessageTemplate';
+import Profile from "./components/Profile";
 import Social from './components/Social';
 import TextItem from './components/TextItem';
 import Thumbnail from './components/Thumbnail';
@@ -25,6 +26,7 @@ export {
     Link,
     MessageInfo,
     MessageTemplate,
+    Profile,
     Social,
     TextItem,
     Thumbnail,

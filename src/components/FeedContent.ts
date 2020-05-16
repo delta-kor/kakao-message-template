@@ -6,12 +6,14 @@ import Content from './Content';
 import ButtonList from './ButtonList';
 import Social from './Social';
 import ThumbnailList from './ThumbnailList';
+import Profile from './Profile';
 
 export default class FeedContent extends Component implements Content {
 
     private textItem: TextItem;
     private buttons: ButtonList;
     private buttonLayout: 'Horizontal' | 'Vertical';
+    private profile: Profile;
     private social: Social;
     private thumbnailCount: number;
     private thumbnailList: ThumbnailList;
@@ -22,6 +24,7 @@ export default class FeedContent extends Component implements Content {
         this.textItem = new TextItem(title, description, link, true);
         this.buttons = new ButtonList();
         this.buttonLayout = 'Vertical';
+        this.profile = new Profile();
         this.social = new Social();
         this.thumbnailCount = 0;
         this.thumbnailList = new ThumbnailList();
@@ -46,6 +49,10 @@ export default class FeedContent extends Component implements Content {
 
     get ButtonLayout(): 'Horizontal' | 'Vertical' {
         return this.buttonLayout;
+    }
+
+    get Profile(): Profile {
+        return this.profile;
     }
 
     get Social(): Social {
@@ -80,6 +87,10 @@ export default class FeedContent extends Component implements Content {
         this.buttonLayout = query;
     }
 
+    set Profile(query: Profile) {
+        this.profile = query;
+    }
+
     set Social(query: Social) {
         this.social = query;
     }
@@ -97,6 +108,7 @@ export default class FeedContent extends Component implements Content {
             BUL: this.buttons.toJson(),
             BUT: this.buttonLayout === 'Horizontal' ? 0 : 1,
             TI: this.textItem.toJson(),
+            PR: this.profile.toJson(),
             SO: this.social.toJson(),
             THC: this.thumbnailCount,
             THL: this.thumbnailList.toJson()
