@@ -3,6 +3,8 @@ import ArticleListItem from './components/ArticleListItem';
 import Button from './components/Button';
 import ButtonItem from './components/ButtonItem';
 import ButtonList from './components/ButtonList';
+import Commerce from './components/Commerce';
+import CommerceContent from './components/CommerceContent';
 import Content from './components/Content';
 import FeedContent from './components/FeedContent';
 import Header from './components/Header';
@@ -30,6 +32,8 @@ export {
     Button,
     ButtonItem,
     ButtonList,
+    Commerce,
+    CommerceContent,
     Content,
     FeedContent,
     Header,
