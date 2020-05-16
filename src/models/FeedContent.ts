@@ -8,6 +8,7 @@ import ProfileModel from './Profile';
 import HeaderModel from './Header';
 import ImageTitleModel from './ImageTitle';
 import ItemModel from './Item';
+import ItemListSummaryModel from './ItemListSummary';
 
 export default interface FeedContentModel extends ContentModel {
     BUL?: ButtonModel[];
@@ -15,7 +16,7 @@ export default interface FeedContentModel extends ContentModel {
     HD?: HeaderModel;
     IMT?: ImageTitleModel;
     ITL?: ItemModel[];
-    // ILS?: ItemListSummary;
+    ILS?: ItemListSummaryModel;
     L?: LinkModel;
     PR?: ProfileModel;
     SO?: SocialModel;

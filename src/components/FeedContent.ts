@@ -10,6 +10,7 @@ import Profile from './Profile';
 import Header from './Header';
 import ImageTitle from './ImageTitle';
 import ItemList from './ItemList';
+import ItemListSummary from './ItemListSummary';
 
 export default class FeedContent extends Component implements Content {
 
@@ -17,8 +18,9 @@ export default class FeedContent extends Component implements Content {
     private buttons: ButtonList;
     private buttonLayout: 'Horizontal' | 'Vertical';
     private header: Header;
-    private itemList: ItemList;
     private imageTitle: ImageTitle;
+    private itemList: ItemList;
+    private itemListSummary: ItemListSummary;
     private profile: Profile;
     private social: Social;
     private thumbnailCount: number;
@@ -31,8 +33,9 @@ export default class FeedContent extends Component implements Content {
         this.buttons = new ButtonList();
         this.buttonLayout = 'Vertical';
         this.header = new Header();
-        this.itemList = new ItemList();
         this.imageTitle = new ImageTitle();
+        this.itemList = new ItemList();
+        this.itemListSummary = new ItemListSummary();
         this.profile = new Profile();
         this.social = new Social();
         this.thumbnailCount = 0;
@@ -70,6 +73,10 @@ export default class FeedContent extends Component implements Content {
 
     get ItemList(): ItemList {
         return this.itemList;
+    }
+
+    get ItemListSummary(): ItemListSummary {
+        return this.itemListSummary;
     }
 
     get Profile(): Profile {
@@ -120,6 +127,10 @@ export default class FeedContent extends Component implements Content {
         this.itemList = query;
     }
 
+    set ItemListSummary(query: ItemListSummary) {
+        this.itemListSummary = query;
+    }
+
     set Profile(query: Profile) {
         this.profile = query;
     }
@@ -143,6 +154,7 @@ export default class FeedContent extends Component implements Content {
             HD: this.header.toJson(),
             IMT: this.imageTitle.toJson(),
             ITL: this.itemList.toJson(),
+            ILS: this.itemListSummary.toJson(),
             PR: this.profile.toJson(),
             SO: this.social.toJson(),
             THC: this.thumbnailCount,
