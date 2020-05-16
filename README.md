@@ -20,7 +20,8 @@ $ npm install kakao-message-template
 * Full Customizable Message Template
 * Sending Through node-kakao
 
-### Examples
+## Examples
+### Sending Feed Message
 ```js
 const {MessageTemplate, MessageInfo, MessageType, FeedContent, Button} = require('kakao-message-template');
 
@@ -36,6 +37,7 @@ const Message = new MessageTemplate(Header, Content);
 const attachment = new AttachmentTemplate(Message);
 chat.replyAttachment(attachment);
 ```
+### Sending List Message
 ```js
 const {MessageTemplate, MessageInfo, MessageType, ListContent, ArticleListItem} = require('kakao-message-template');
 
@@ -54,3 +56,8 @@ const Message = new MessageTemplate(Header, Content);
 const attachment = new AttachmentTemplate(Message);
 chat.replyAttachment(attachment);
 ```
+
+## License (MIT)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+* [MIT License](http://opensource.org/licenses/mit-license.php)
+* See the [LICENSE file](https://github.com/delta-kor/kakao-message-template/blob/master/LICENSE) for details.
