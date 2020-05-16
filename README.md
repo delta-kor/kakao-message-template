@@ -7,7 +7,10 @@ A kakao custom message template builder for [node-kakao](https://github.com/stor
 This is a module available by the [npm registry](https://npmjs.com).  
 Tested on [Node.js](https://nodejs.org/en/) v10.16.2, Node.js 8.0 or higher is required.  
 Installation can be done by using the ```npm install``` command.  
-Make sure to create ```package.json``` by ```npm init``` command.  
+Make sure to create ```package.json``` by ```npm init``` command.
+
+Important! : The package is unpublished from the npm registry for personal reasons.
+
 ```bash
 $ npm install kakao-message-template
 ```
