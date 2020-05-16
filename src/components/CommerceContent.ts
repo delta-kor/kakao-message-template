@@ -6,8 +6,9 @@ import ThumbnailList from './ThumbnailList';
 import Profile from './Profile';
 import Commerce from './Commerce';
 import CommerceContentModel from '../models/CommerceContent';
+import Content from './Content';
 
-export default class CommerceContent extends Component {
+export default class CommerceContent extends Content {
 
     private buttons: ButtonList;
     private buttonLayout: 'Horizontal' | 'Vertical';

@@ -17,7 +17,8 @@ import Link from './components/Link';
 import ListContent from './components/ListContent';
 import MessageInfo from './components/MessageInfo';
 import MessageTemplate from './components/MessageTemplate';
-import Profile from "./components/Profile";
+import Profile from './components/Profile';
+import ProfileContent from './components/ProfileContent';
 import Social from './components/Social';
 import TextItem from './components/TextItem';
 import Thumbnail from './components/Thumbnail';
@@ -47,6 +48,7 @@ export {
     MessageInfo,
     MessageTemplate,
     Profile,
+    ProfileContent,
     Social,
     TextItem,
     Thumbnail,
