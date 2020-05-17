@@ -5,8 +5,8 @@ import KakaoLinkInfoModel from './KakaoLinkInfo';
 
 export default interface MessageTemplateModel extends Model {
     // CAL?: CalendarContent;
-    C: ContentModel;
-    P: MessageInfoModel;
+    C?: ContentModel;
+    P?: MessageInfoModel;
     K?: KakaoLinkInfoModel;
     // MKW?: JsonElement;
 }
