@@ -1,5 +1,5 @@
 # KAKAO-MESSAGE-TEMPLATE
-A kakao custom message template builder for [node-kakao](https://github.com/storycraft/node-kakao)
+A kakao custom message template builder
 
 ## Getting Started
 
@@ -16,7 +16,6 @@ $ npm install kakao-message-template
 ### Features
 * Creating Custom Message Template
 * Full Customizable Message Template
-* Sending Through node-kakao
 
 ## Examples
 ### Sending Feed Message
@@ -30,10 +29,6 @@ Content.Buttons.push(new Button('Homepage', 'http://example.com/'));
 Content.Buttons.push(new Button('Signup', 'http://example.com/signup'));
 
 const Message = new MessageTemplate(Header, Content);
-
-// Sending attachment by node-kakao
-const attachment = new AttachmentTemplate(Message);
-chat.replyAttachment(attachment);
 ```
 ### Sending List Message
 ```js
@@ -49,10 +44,6 @@ Content.ArticleList.push(
 );
 
 const Message = new MessageTemplate(Header, Content);
-
-// Sending attachment by node-kakao
-const attachment = new AttachmentTemplate(Message);
-chat.replyAttachment(attachment);
 ```
 
 ## License (MIT)

@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/delta-kor/kakao-message-template#readme",
   "dependencies": {
-    "node-kakao": "^2.0.4"
   },
   "devDependencies": {
     "typescript": "^3.9.2"
