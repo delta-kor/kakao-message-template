@@ -29,6 +29,10 @@ Content.Buttons.push(new Button('Homepage', 'http://example.com/'));
 Content.Buttons.push(new Button('Signup', 'http://example.com/signup'));
 
 const Message = new MessageTemplate(Header, Content);
+
+// Sending attachment by node-kakao
+const attachment = new AttachmentTemplate(Message);
+chat.replyAttachment(attachment);
 ```
 ### Sending List Message
 ```js
@@ -44,6 +48,10 @@ Content.ArticleList.push(
 );
 
 const Message = new MessageTemplate(Header, Content);
+
+// Sending attachment by node-kakao
+const attachment = new AttachmentTemplate(Message);
+chat.replyAttachment(attachment);
 ```
 
 ## License (MIT)

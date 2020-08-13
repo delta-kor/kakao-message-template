@@ -37,7 +37,7 @@ export default class MessageInfo extends Component {
         this.versionWindows = '2.3.5';
         this.versionMac = '2.6.1';
         this.serviceID = 'plusfriend_bot';
-        this.documentID = 'profile_id=256584582';
+        this.documentID = 'profile_id=12341234';
 
     }
 

@@ -3,14 +3,14 @@ import KakaoLinkInfoModel from '../models/KakaoLinkInfo';
 
 export default class KakaoLinkInfo extends Component {
 
-    private readonly appID: string;
+    private readonly appID: undefined;
     private readonly templateID: string;
 
     constructor() {
 
         super();
-        this.appID = '331278';
-        this.templateID = '3140';
+        this.appID = undefined;
+        this.templateID = '1111';
 
     }
 
