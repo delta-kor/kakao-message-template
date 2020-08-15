@@ -1,6 +1,6 @@
 import { Component, Model } from '../component';
 
-interface LinkModel extends Model {
+export interface LinkModel extends Model {
     LPC: string;
     LMO: string;
     LCA: string;
