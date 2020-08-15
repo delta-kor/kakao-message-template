@@ -2,3 +2,4 @@ node_modules/
 karma.conf.js
 spec/
 src/**/*
+.idea/

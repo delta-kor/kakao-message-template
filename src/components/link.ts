@@ -14,6 +14,9 @@ export class Link extends Component {
     public Android: string;
     public IOS: string;
 
+    constructor(link: string);
+    constructor(pc: string, mobile: string);
+    constructor(windows: string, mac: string, android: string, ios: string);
     constructor(...params: string[]) {
         super();
         if(params.length === 1) {
