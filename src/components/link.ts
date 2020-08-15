@@ -39,6 +39,23 @@ export class Link extends Component {
         }
     }
 
+    set Pc(query: string) {
+        this.Windows = query;
+        this.Mac = query;
+    }
+
+    set Mobile(query: string) {
+        this.Android = query;
+        this.IOS = query;
+    }
+
+    set All(query: string) {
+        this.Windows = query;
+        this.Mac = query;
+        this.Android = query;
+        this.IOS = query;
+    }
+
     toJson(): LinkModel {
         return {
             LPC: this.Windows,
