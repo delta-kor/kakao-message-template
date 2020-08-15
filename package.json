@@ -20,10 +20,5 @@
   "bugs": {
     "url": "https://github.com/delta-kor/kakao-message-template/issues"
   },
-  "homepage": "https://github.com/delta-kor/kakao-message-template#readme",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "typescript": "^3.9.2"
-  }
+  "homepage": "https://github.com/delta-kor/kakao-message-template#readme"
 }
