@@ -28,9 +28,9 @@ export class Image extends Component {
     public Thumbnail: string;
 
     constructor(thumbnail: string);
-    constructor(thumbnail: string, width: string, height: string);
-    constructor(thumbnail: string, width: string, height: string, crop: ImageCrop);
-    constructor(thumbnail: string, width: string, height: string, crop: ImageCrop, live: boolean, playTime: number);
+    constructor(thumbnail: string, width: number, height: number);
+    constructor(thumbnail: string, width: number, height: number, crop: ImageCrop);
+    constructor(thumbnail: string, width: number, height: number, crop: ImageCrop, live: boolean, playTime: number);
     constructor(...params: any[]) {
         super();
         this.Link = new Link('');
