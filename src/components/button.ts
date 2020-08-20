@@ -61,7 +61,9 @@ export class Button extends Component {
                 this.Link = params[1];
 
         } else {
+
             throw new SyntaxError('Invalid button parameters. There must be 1, 2, 4 parameters.');
+
         }
     }
 
