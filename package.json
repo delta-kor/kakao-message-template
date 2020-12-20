@@ -1,0 +1,9 @@
+{
+  "name": "kakao-message-template",
+  "version": "2.0.0",
+  "description": "A kakao custom message template builder for node-kakao",
+  "main": "dist/index.js",
+  "repository": "https://github.com/delta-kor/kakao-message-template",
+  "author": "delta-kor <deltakbot1@gmail.com>",
+  "license": "MIT"
+}
