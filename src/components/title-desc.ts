@@ -10,8 +10,7 @@ export default class TitleDesc implements Component<TitleDescModel> {
   public title: string;
   public description: string;
 
-  constructor(title: string);
-  constructor(title: string, description: string);
+  constructor(title: string, description?: string);
   constructor() {
     this.title = arguments[0];
     this.description = arguments[1];
