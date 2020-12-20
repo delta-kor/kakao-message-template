@@ -105,3 +105,6 @@ dist
 
 # Intellij
 .idea
+
+# Private test
+test/
