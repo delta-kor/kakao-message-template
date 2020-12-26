@@ -1,5 +1,7 @@
 import Button from './components/button';
 import Link from './components/link';
+import Profile from './components/profile';
+import Social from './components/social';
 import TextItem from './components/text-item';
 import Thumbnail from './components/thumbnail';
 import TitleDesc from './components/title-desc';
@@ -13,6 +15,8 @@ import MessageType from './message-type';
 export {
   Button,
   Link,
+  Profile,
+  Social,
   TextItem,
   Thumbnail,
   TitleDesc,
