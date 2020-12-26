@@ -58,6 +58,8 @@ export default class Link implements Component<LinkModel> {
       LI: this.ios,
       LCA: this.android,
       LCI: this.ios,
+      LPC: this.windows,
+      LMO: this.android,
     };
   }
 }

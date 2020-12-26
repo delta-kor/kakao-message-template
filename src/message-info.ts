@@ -55,6 +55,7 @@ export default class MessageInfo implements Component<MessageInfoModel> {
     return {
       DID: 'profile_id=12341234',
       FW: this.forwardable,
+      ME: '카카오링크',
       SIC: this.serviceIcon,
       SID: 'plusfriend_bot',
       SL: this.serviceLink.toJson(),
