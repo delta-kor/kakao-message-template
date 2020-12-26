@@ -3,6 +3,7 @@ import { CarouselContent } from '../types/content';
 import Button, { ButtonModel } from '../components/button';
 import Link, { LinkModel } from '../components/link';
 import TextItem, { TextItemModel } from '../components/text-item';
+import ButtonType from '../button-type';
 
 export interface FeedContentModel extends CarouselModel {
   BUL: Partial<ButtonModel>[];
@@ -21,9 +22,10 @@ export interface FeedContentModel extends CarouselModel {
 }
 
 export default class FeedContent extends CarouselContent<FeedContentModel> {
-  public readonly buttons: Button[] = [];
-  public readonly link: Link;
   public readonly textItem: TextItem;
+  public readonly link: Link;
+  public readonly buttons: Button[] = [];
+  public buttonType: ButtonType = ButtonType.HORIZONTAL;
 
   constructor(title: string, description?: string);
   constructor(title: string, description: string, url: string);
@@ -37,6 +39,7 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
   toJson(): Partial<FeedContentModel> {
     return {
       BUL: this.buttons.map(button => button.toJson()),
+      BUT: this.buttonType,
       L: this.link.toJson(),
       TI: this.textItem.toJson(),
     };

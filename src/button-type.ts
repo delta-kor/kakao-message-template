@@ -1,6 +1,6 @@
 enum ButtonType {
-  HORIZONTAL,
   VERTICAL,
+  HORIZONTAL,
 }
 
 export default ButtonType;
