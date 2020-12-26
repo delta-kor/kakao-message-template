@@ -18,6 +18,7 @@ export default class TextItem implements Component<TextItemModel> {
   constructor(title: string);
   constructor(title: string, description: string);
   constructor(title: string, description: string, url: string);
+  constructor(title: string, description: string, link: Link);
   constructor() {
     switch (arguments.length) {
       case 1:
@@ -30,7 +31,7 @@ export default class TextItem implements Component<TextItemModel> {
       case 3:
         this.title = arguments[0];
         this.description = arguments[1];
-        this.link = new Link(arguments[2]);
+        this.link = arguments[2] instanceof Link ? arguments[2] : new Link(arguments[2] || '');
         break;
       default:
         throw new ReferenceError('Invalid params');

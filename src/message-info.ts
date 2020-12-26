@@ -42,13 +42,13 @@ export default class MessageInfo implements Component<MessageInfoModel> {
   public forwardable: boolean = false;
   public verified: boolean = false;
 
-  constructor(type: MessageType, serviceName?: string, serviceUrl?: string, serviceIcon?: string);
-  constructor(type: MessageType, serviceName?: string, serviceLink?: Link, serviceIcon?: string);
+  constructor(type: MessageType, serviceName?: string, serviceIcon?: string, serviceUrl?: string);
+  constructor(type: MessageType, serviceName?: string, serviceIcon?: string, serviceLink?: Link);
   constructor() {
     this.type = arguments[0];
     this.serviceName = arguments[1] || '';
-    this.serviceLink = arguments[2] instanceof Link ? arguments[2] : new Link(arguments[2] || '');
-    this.serviceIcon = arguments[3] || '';
+    this.serviceIcon = arguments[2] || '';
+    this.serviceLink = arguments[3] instanceof Link ? arguments[3] : new Link(arguments[3] || '');
   }
 
   toJson(): Partial<MessageInfoModel> {

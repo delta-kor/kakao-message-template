@@ -22,12 +22,16 @@ export interface FeedContentModel extends CarouselModel {
 
 export default class FeedContent extends CarouselContent<FeedContentModel> {
   public readonly buttons: Button[] = [];
-  public readonly link: Link = new Link('');
+  public readonly link: Link;
   public readonly textItem: TextItem;
 
-  constructor(title: string = '', description: string = '') {
+  constructor(title: string, description?: string);
+  constructor(title: string, description: string, url: string);
+  constructor(title: string, description: string, link: Link);
+  constructor() {
     super();
-    this.textItem = new TextItem(title, description);
+    this.textItem = new TextItem(arguments[0], arguments[1]);
+    this.link = arguments[2] instanceof Link ? arguments[2] : new Link(arguments[2] || '');
   }
 
   toJson(): Partial<FeedContentModel> {
