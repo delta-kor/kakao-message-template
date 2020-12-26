@@ -6,6 +6,7 @@ import Link, { LinkModel } from '../components/link';
 import TextItem, { TextItemModel } from '../components/text-item';
 import Thumbnail, { ThumbnailModel } from '../components/thumbnail';
 import Social, { SocialModel } from '../components/social';
+import Profile, { ProfileModel } from '../components/profile';
 
 export interface FeedContentModel extends CarouselModel {
   BUL: Partial<ButtonModel>[];
@@ -15,7 +16,7 @@ export interface FeedContentModel extends CarouselModel {
   ITL: any;
   ILS: any;
   L: Partial<LinkModel>;
-  PR: any;
+  PR: Partial<ProfileModel>;
   SO: Partial<SocialModel>;
   TAM: any[];
   TI: Partial<TextItemModel>;
@@ -29,6 +30,7 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
   public readonly buttons: Button[] = [];
   public readonly thumbnails: Thumbnail[] = [];
   public readonly social: Social = new Social();
+  public readonly profile: Profile = new Profile('', '');
   public buttonType: ButtonType = ButtonType.HORIZONTAL;
   public thumbnailCount?: number;
 
@@ -46,6 +48,7 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
       BUL: this.buttons.map(button => button.toJson()),
       BUT: this.buttonType,
       L: this.link.toJson(),
+      PR: this.profile.toJson(),
       SO: this.social.toJson(),
       TI: this.text.toJson(),
       THC: this.thumbnailCount,
