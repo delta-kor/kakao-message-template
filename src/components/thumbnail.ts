@@ -1,5 +1,6 @@
-import { Model } from '../types/model';
 import Link, { LinkModel } from './link';
+import CropType from '../crop-type';
+import { Model } from '../types/model';
 import { Component } from '../types/component';
 
 interface ThumbnailContentModel extends Model {
@@ -36,6 +37,8 @@ export default class Thumbnail implements Component<ThumbnailModel> {
     this.height = 0;
     this.link = new Link('');
     switch (arguments.length) {
+      case 1:
+        break;
       case 2:
         this.link = arguments[1] instanceof Link ? arguments[1] : new Link(arguments[1]);
         break;
