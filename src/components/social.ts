@@ -16,14 +16,6 @@ export default class Social implements Component<SocialModel> {
   public subscribe?: number;
   public view?: number;
 
-  constructor(comment?: number, like?: number, share?: number, subscribe?: number, view?: number) {
-    this.comment = comment;
-    this.like = like;
-    this.share = share;
-    this.subscribe = subscribe;
-    this.view = view;
-  }
-
   toJson(): Partial<SocialModel> {
     return {
       CM: this.comment,
