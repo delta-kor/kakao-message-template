@@ -1,0 +1,4 @@
+enum CropType {
+  CROP,
+  ORIGINAL,
+}

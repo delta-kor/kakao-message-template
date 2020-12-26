@@ -1,6 +1,7 @@
 import Button from './components/button';
 import Link from './components/link';
 import TextItem from './components/text-item';
+import Thumbnail from './components/thumbnail';
 import TitleDesc from './components/title-desc';
 import FeedContent from './content/feed';
 import ButtonType from './button-type';
@@ -13,6 +14,7 @@ export {
   Button,
   Link,
   TextItem,
+  Thumbnail,
   TitleDesc,
   FeedContent,
   ButtonType,
