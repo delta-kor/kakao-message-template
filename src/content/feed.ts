@@ -9,14 +9,16 @@ import Social, { SocialModel } from '../components/social';
 import Profile, { ProfileModel } from '../components/profile';
 import Header, { HeaderModel } from '../components/header';
 import ImageTitle, { ImageTitleModel } from '../components/image-title';
+import ItemList, { ItemListModel } from '../components/item-list';
+import ItemListSummary, { ItemListSummaryModel } from '../components/item-list-summary';
 
 export interface FeedContentModel extends CarouselModel {
   BUL: Partial<ButtonModel>[];
   BUT: number;
   HD: Partial<HeaderModel>;
   IMT: Partial<ImageTitleModel>;
-  ITL: any;
-  ILS: any;
+  ITL: Partial<ItemListModel>[];
+  ILS: Partial<ItemListSummaryModel>;
   L: Partial<LinkModel>;
   PR: Partial<ProfileModel>;
   SO: Partial<SocialModel>;
@@ -35,6 +37,8 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
   public readonly social: Social = new Social();
   public readonly profile: Profile = new Profile('', '');
   public readonly imageTitle: ImageTitle = new ImageTitle();
+  public readonly itemList: ItemList[] = [];
+  public readonly itemListSummary: ItemListSummary = new ItemListSummary();
   public buttonType: ButtonType = ButtonType.HORIZONTAL;
   public thumbnailCount?: number;
 
@@ -53,6 +57,8 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
       BUT: this.buttonType,
       HD: this.header.toJson(),
       IMT: this.imageTitle.toJson(),
+      ITL: this.itemList.map(item => item.toJson()),
+      ILS: this.itemListSummary.toJson(),
       L: this.link.toJson(),
       PR: this.profile.toJson(),
       SO: this.social.toJson(),
