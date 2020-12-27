@@ -7,11 +7,12 @@ import TextItem, { TextItemModel } from '../components/text-item';
 import Thumbnail, { ThumbnailModel } from '../components/thumbnail';
 import Social, { SocialModel } from '../components/social';
 import Profile, { ProfileModel } from '../components/profile';
+import Header, { HeaderModel } from '../components/header';
 
 export interface FeedContentModel extends CarouselModel {
   BUL: Partial<ButtonModel>[];
   BUT: number;
-  HD: any;
+  HD: Partial<HeaderModel>;
   IMT: any;
   ITL: any;
   ILS: any;
@@ -29,6 +30,7 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
   public readonly link: Link;
   public readonly buttons: Button[] = [];
   public readonly thumbnails: Thumbnail[] = [];
+  public readonly header: Header = new Header();
   public readonly social: Social = new Social();
   public readonly profile: Profile = new Profile('', '');
   public buttonType: ButtonType = ButtonType.HORIZONTAL;
@@ -47,6 +49,7 @@ export default class FeedContent extends CarouselContent<FeedContentModel> {
     return {
       BUL: this.buttons.map(button => button.toJson()),
       BUT: this.buttonType,
+      HD: this.header.toJson(),
       L: this.link.toJson(),
       PR: this.profile.toJson(),
       SO: this.social.toJson(),
